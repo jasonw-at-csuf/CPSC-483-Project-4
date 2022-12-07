@@ -247,7 +247,6 @@ if torch.cuda.is_available():
     # """
     print("GPU will be utilized for computation.")
 elif torch.backends.mps.is_available() and device.type == "mps":
-    print(torch.version)
     start_time = time.perf_counter()
     A = torch.rand(d, d, device=device)
     B = torch.rand(d, d, device=device)
